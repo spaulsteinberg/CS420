@@ -1,0 +1,726 @@
+Samuel Steinberg,, ,,,,,,
+Wrap:,TRUE,,,,,,,
+K(states):,5,,,,,,,
+Radius:,1,,,,,,,
+Quiescence:,TRUE,,,,,,,
+random seed:,-2.65E+18,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Experiment #:,0,,,,,,,
+Rule:,2.13E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.951239866,1.987773371,0,Class III complex behavior
+1,6,2,0.84,0.846153846,2.183930616,2.045841641,0,Class III complex behavior
+2,2,2,0.792,0.769230769,2.143993402,1.987773371,0,Class III complex behavior
+3,12,2,0.784,0.692307692,2.150232848,2.038159682,0,Class III complex behavior
+4,9,2,0.704,0.615384615,1.9010446,1.76049503,0,Class III complex behavior
+5,10,1,0.656,0.538461538,1.904429343,1.738149333,0,This is a borderline  IV --> Close to IV than III
+6,4,2,0.536,0.461538462,1.521788108,1.419556299,0,Class III complex behavior
+7,1,2,0.512,0.384615385,1.505798561,1.334679141,0,Class III complex behavior
+8,8,2,0.392,0.307692308,1.352287527,1.198183948,0,Class III complex behavior
+9,5,2,0.248,0.230769231,1.033069894,0.991264261,0,Class III complex behavior
+10,3,0,0.168,0.153846154,0.653109112,0.619382195,0,Textbook Class I -- solid black
+11,11,0,0.144,0.076923077,0.594619344,0.391243564,0,Textbook Class I -- solid black
+12,7,0,0,0,0,0,0,Textbook Class I -- solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,1,,,,,,,
+Rule:,1.43E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.728368632,2.133937566,0,Complex behavior
+1,8,2,0.872,0.846153846,2.045753359,2.257756064,0,Fringe class IV but not quite chaotic enough
+2,1,2,0.848,0.769230769,1.976068376,2.199687795,0,"Almost class IV, not chaotic enough"
+3,7,1,0.704,0.692307692,1.835989762,2.10390991,0,Class IV --> behavior more chaotic
+4,5,0,0.56,0.615384615,1.730502899,2.075869297,0,Class II Oscillations
+5,11,0,0.536,0.538461538,1.689882973,1.987773371,0,Class II Oscillations
+6,12,0,0.528,0.461538462,1.631378636,1.669180337,0,Class II Oscillations
+7,4,2,0.408,0.384615385,1.526658101,1.546593564,0,Complex behavior
+8,10,0,0.36,0.307692308,1.402866265,1.352030102,0,Too much black space for III
+9,9,0,0.28,0.230769231,1.256132626,1.145110414,0,Too much black space for III
+10,6,2,0.128,0.153846154,0.674095106,0.773228349,0,More complex than previous step
+11,3,0,0.048,0.076923077,0.277839574,0.391243564,0,Class I solid black color
+12,2,0,0,0,0,0,0,Class I solid black color
+,,,,,,,,
+,,,,,,,,
+Experiment #:,2,,,,,,,
+Rule:,1.14E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.665444353,2.10390991,0,Class II behavior
+1,8,2,0.872,0.846153846,1.948112692,2.16197818,0,Complex but not chaotic
+2,12,1,0.864,0.769230769,1.904217746,1.950063756,0,IV patterns with patterns in holes
+3,3,2,0.784,0.692307692,1.984977758,1.950063756,0,Mix between II and III
+4,5,0,0.64,0.615384615,1.946102509,1.884313528,0,Mix between II and III
+5,7,2,0.496,0.538461538,1.744117885,1.833927218,0,Mix between II and III
+6,10,2,0.448,0.461538462,1.653843922,1.669180337,0,Complex III behavior
+7,6,2,0.296,0.384615385,1.339606906,1.488525295,0,Complex III behavior
+8,9,2,0.216,0.307692308,0.966868495,1.140115679,0,One or two holes filled in
+9,1,0,0.192,0.230769231,0.888887935,0.991264261,0,A few holes filled in
+10,4,0,0.072,0.153846154,0.373343321,0.619382195,0,Straight lines
+11,2,0,0.024,0.076923077,0.163345543,0.391243564,0,Class I solid black color
+12,11,0,0,0,0,0,0,Class I solid black color
+,,,,,,,,
+,,,,,,,,
+Experiment #:,3,,,,,,,
+Rule:,1.44E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.981940315,2.199687795,0,Typical class III -- all colors filled in
+1,11,2,0.968,0.846153846,2.083976039,2.295465679,0,Tiny dots in patterns
+2,1,2,0.944,0.769230769,2.124449146,2.295465679,0,Holes but not enough
+3,8,2,0.824,0.692307692,2.213441742,2.257756064,0,"Could have classified as class IV, but not quite"
+4,12,2,0.816,0.615384615,2.209139435,2.133937566,0,"Same as above, not quite "
+5,3,0,0.736,0.538461538,2.097676587,1.987773371,0,Class II oscillations
+6,10,0,0.688,0.461538462,2.104988022,1.88109476,0,Class I solid lines
+7,2,0,0.64,0.384615385,1.9010446,1.546593564,0,Class I solid lines
+8,5,0,0.496,0.307692308,1.676655888,1.352030102,0,Class I solid lines
+9,6,0,0.344,0.230769231,1.46017985,1.145110414,0,Class I with one solid lines
+10,9,0,0.264,0.153846154,1.095146613,0.773228349,0,Class I solid black color
+11,7,0,0.12,0.076923077,0.529360865,0.391243564,0,Class I solid black color
+12,4,0,0,0,0,0,0,Class I solid black color
+,,,,,,,,
+,,,,,,,,
+Experiment #:,4,,,,,,,
+Rule:,1.12E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.892717168,2.133937566,0,"Very symmetrical pattern, not complex enough for class III"
+1,9,2,0.912,0.846153846,2.095715192,2.257756064,0,Class III complexity
+2,10,2,0.864,0.769230769,2.034445728,2.199687795,0,Class III complexity
+3,11,2,0.84,0.692307692,1.93687128,1.950063756,0,Class III complexity
+4,6,2,0.688,0.615384615,1.920863279,1.826245258,0,Class III complexity
+5,8,2,0.568,0.538461538,1.74681436,1.775858948,0,Class III complexity
+6,3,2,0.488,0.461538462,1.695840789,1.669180337,0,Class III complexity with some II properties
+7,1,0,0.464,0.384615385,1.624959355,1.546593564,0,Complex but not enough for III
+8,2,0,0.416,0.307692308,1.418737495,1.352030102,0,Class II oscillations
+9,4,0,0.296,0.230769231,1.217406025,1.145110414,0,Class I solid lines
+10,12,0,0.288,0.153846154,1.154123681,0.773228349,0,Class I solid black color
+11,7,0,0.144,0.076923077,0.594619344,0.391243564,0,Class I solid black color
+12,5,0,0,0,0,0,0,Class I solid black color
+,,,,,,,,
+,,,,,,,,
+Experiment #:,5,,,,,,,
+Rule:,3.23E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.907445843,1.987773371,0,Typical III behavior with some holes
+1,6,2,0.84,0.846153846,2.195420602,2.133937566,0,Complexity of IV but not chaotic enough
+2,2,2,0.792,0.769230769,2.226563081,2.133937566,0,Typical III behavior with some holes
+3,5,2,0.648,0.692307692,2.145427788,2.038159682,0,Typical III behavior with some holes
+4,10,2,0.6,0.615384615,2.086045696,2.038159682,0,Typical III behavior with some holes
+5,3,0,0.52,0.538461538,1.906963757,1.987773371,0,Solid black color -- Class I
+6,8,0,0.4,0.461538462,1.736230875,1.823026491,0,Solid black color -- Class I
+7,1,0,0.376,0.384615385,1.644642981,1.700439718,0,Solid black color -- Class I
+8,11,0,0.352,0.307692308,1.522511164,1.505876256,0,Solid black color -- Class I
+9,12,0,0.344,0.230769231,1.46017985,1.145110414,0,Solid black color -- Class I
+10,4,0,0.224,0.153846154,0.978028471,0.773228349,0,Solid black color -- Class I
+11,7,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black color -- Class I
+12,9,0,0,0,0,0,0,Solid black color -- Class I
+,,,,,,,,
+,,,,,,,,
+Experiment #:,6,,,,,,,
+Rule:,2.13E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.687515938,1.88109476,0,Class II periodic oscillations
+1,7,0,0.848,0.846153846,1.798065556,1.88109476,0,Solid green -- Class I
+2,12,0,0.84,0.769230769,1.790917778,1.823026491,0,Solid green -- Class I
+3,3,0,0.76,0.692307692,1.570526778,1.573402452,0,Solid green -- Class I
+4,10,0,0.712,0.615384615,1.620667221,1.614330835,0,Solid green with oscillation -- Class II
+5,6,2,0.56,0.538461538,1.664767811,1.614330835,0,Class III complexity
+6,2,0,0.512,0.461538462,1.438444464,1.295737801,0,Periodic solid lines
+7,11,0,0.488,0.384615385,1.426680009,1.238901257,0,Periodic solid lines
+8,1,0,0.464,0.307692308,1.410874288,1.140115679,0,Periodic solid lines
+9,8,0,0.344,0.230769231,1.265989731,0.991264261,0,Periodic solid lines
+10,5,0,0.2,0.153846154,0.721928095,0.619382195,0,Periodic solid lines
+11,4,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black - Class I
+12,9,0,0,0,0,0,0,Solid black - Class I
+,,,,,,,,
+,,,,,,,,
+Experiment #:,7,,,,,,,
+Rule:,4.22E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.933664037,2.038159682,0,Solid orange color -- Class I
+1,10,2,0.944,0.846153846,2.045534617,2.038159682,0,Controlled chaotic -- not enough for IV
+2,1,2,0.92,0.769230769,2.093191489,2.10390991,0,Controlled chaotic -- not enough for IV
+3,9,2,0.84,0.692307692,2.162577277,2.10390991,0,Controlled chaotic -- not enough for IV
+4,11,2,0.816,0.615384615,2.160925355,2.038159682,0,Controlled chaotic -- not enough for IV
+5,8,2,0.696,0.538461538,2.219234022,1.987773371,0,Controlled chaotic -- not enough for IV
+6,3,2,0.616,0.461538462,2.177406393,1.88109476,0,Controlled chaotic -- not enough for IV
+7,4,2,0.496,0.384615385,1.778309783,1.546593564,0,Controlled chaotic -- not enough for IV
+8,5,2,0.352,0.307692308,1.328321045,1.352030102,0,Controlled chaotic -- not enough for IV
+9,6,2,0.2,0.230769231,0.926151933,1.145110414,0,Complex but not chaotic
+10,7,2,0.056,0.153846154,0.344491046,0.773228349,0,Complex but not chaotic
+11,2,0,0.008,0.076923077,0.067221545,0.391243564,0,Solid black -- Class I
+12,12,0,0,0,0,0,0,
+,,,,,,,,
+,,,,,,,,
+Experiment #:,8,,,,,,,
+Rule:,2.32E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.98643292,2.16197818,0,Borderline class III - IV
+1,1,1,0.968,0.846153846,2.075381329,2.257756064,0,Borderline class III - IV
+2,11,1,0.944,0.769230769,2.148205178,2.295465679,0,Borderline class III - IV
+3,12,2,0.936,0.692307692,2.163621142,2.257756064,0,Not chaotic enough for IV
+4,2,1,0.888,0.615384615,2.198279846,2.133937566,0,Chaotic with random holes and design
+5,8,0,0.768,0.538461538,2.160668997,1.987773371,0,Class II oscillation
+6,10,0,0.72,0.461538462,2.176158222,1.88109476,0,Class II oscillation
+7,3,0,0.64,0.384615385,2.111668654,1.700439718,0,Class II oscillation
+8,4,0,0.52,0.307692308,1.722255155,1.352030102,0,Solid black color - Class I
+9,9,0,0.44,0.230769231,1.390918399,0.991264261,0,Solid black color - Class I
+10,5,0,0.296,0.153846154,0.876346229,0.619382195,0,Solid black color - Class I
+11,6,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black color - Class I
+12,7,0,0,0,0,0,0,Solid black color - Class I
+,,,,,,,,
+,,,,,,,,
+Experiment #:,9,,,,,,,
+Rule:,4.12E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.960449732,2.133937566,0,Normal Class III
+1,3,2,0.912,0.846153846,2.137386359,2.133937566,0,Normal Class III
+2,12,2,0.904,0.769230769,2.1540006,2.199687795,0,Normal Class III
+3,7,1,0.76,0.692307692,2.287475114,2.199687795,0,Chaotic and complex -- random gaping holes
+4,5,0,0.616,0.615384615,2.1540006,2.133937566,0,Class II oscillations
+5,1,0,0.592,0.538461538,2.132352925,2.045841641,0,Class II oscillations
+6,2,0,0.544,0.461538462,2.006982818,1.88109476,0,Class II oscillations
+7,6,0,0.392,0.384615385,1.513725718,1.546593564,0,Class II oscillations
+8,11,0,0.368,0.307692308,1.460118542,1.352030102,0,Class II oscillations
+9,10,0,0.32,0.230769231,1.209800339,0.991264261,0,Class II oscillations
+10,8,0,0.2,0.153846154,0.916118214,0.773228349,0,Class II oscillations
+11,4,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black
+12,9,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,10,,,,,,,
+Rule:,4.23E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.882178513,2.199687795,0,Class III noise
+1,2,2,0.944,0.846153846,2.070414944,2.295465679,0,Class III noise
+2,8,2,0.824,0.769230769,2.268177994,2.295465679,0,Class III noise
+3,6,2,0.672,0.692307692,2.168984662,2.257756064,0,Class III noise
+4,5,1,0.528,0.615384615,2.0381234,2.133937566,0,Complex/chaotic with rust-like holes
+5,11,1,0.504,0.538461538,1.995134532,2.045841641,0,Complex/chaotic with rust-like holes
+6,1,1,0.48,0.461538462,1.948426968,1.88109476,0,Complex/chaotic with rust-like holes
+7,9,2,0.4,0.384615385,1.647196999,1.700439718,0,Complex but no chaos
+8,7,2,0.256,0.307692308,1.119823258,1.352030102,0,Complex but no chaos
+9,4,2,0.136,0.230769231,0.617561483,0.991264261,0,Complex but no chaos
+10,10,2,0.088,0.153846154,0.468434344,0.773228349,0,Complex but no chaos
+11,3,0,0.008,0.076923077,0.067221545,0.391243564,0,Solid black
+12,12,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,11,,,,,,,
+Rule:,3.44E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.467047738,1.614330835,0,Solid color with oscillations
+1,10,1,0.944,0.846153846,1.651321663,1.76049503,0,Class IV chaotic -- cave stalacites
+2,3,1,0.864,0.769230769,1.819369752,1.826245258,0,Class IV chaotic -- cave stalacites
+3,12,0,0.856,0.692307692,1.83089569,1.854285872,0,Periodic Class II
+4,1,0,0.832,0.615384615,1.860261042,1.826245258,0,Periodic Class II
+5,5,0,0.688,0.538461538,1.899136291,1.775858948,0,Periodic Class II
+6,9,1,0.608,0.461538462,1.885145561,1.669180337,0,More complex with more stalactites
+7,6,2,0.456,0.384615385,1.689495056,1.488525295,0,Borderline but not complex enough
+8,7,2,0.312,0.307692308,1.37862579,1.352030102,0,Borderline but not complex enough
+9,8,2,0.192,0.230769231,0.888887935,0.991264261,0,Very close but still not enough chaos
+10,2,2,0.144,0.153846154,0.688222573,0.773228349,0,Class I solid line
+11,11,2,0.12,0.076923077,0.529360865,0.391243564,0,Class I solid line
+12,4,2,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,12,,,,,,,
+Rule:,2.41E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.929312421,2.16197818,0,Solid color with some noise at top
+1,5,2,0.848,0.846153846,2.039862039,2.16197818,0,Mainly noise with some holes
+2,4,0,0.728,0.769230769,1.864187228,2.10390991,0,Class II oscillation
+3,1,0,0.704,0.692307692,1.855339054,2.10390991,0,Solid black
+4,2,0,0.656,0.615384615,1.654780375,1.826245258,0,Solid black
+5,10,0,0.608,0.538461538,1.660562056,1.775858948,0,Solid black
+6,9,0,0.528,0.461538462,1.550612257,1.669180337,0,Solid black
+7,3,0,0.448,0.384615385,1.501841488,1.546593564,0,Solid black
+8,11,0,0.424,0.307692308,1.357909288,1.198183948,0,Solid black
+9,12,0,0.416,0.230769231,1.340101675,0.991264261,0,Solid black
+10,6,0,0.264,0.153846154,1.095146613,0.773228349,0,Solid black
+11,7,0,0.12,0.076923077,0.529360865,0.391243564,0,Solid black
+12,8,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,13,,,,,,,
+Rule:,4.12E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.911405496,2.075869297,0,Class III noise
+1,6,1,0.84,0.846153846,2.185004664,2.133937566,0,IV chaos with random stalactites
+2,5,2,0.696,0.769230769,2.248115052,2.199687795,0,Class III noise
+3,8,2,0.576,0.692307692,1.883673615,1.950063756,0,Class III noise
+4,10,2,0.528,0.615384615,1.833045311,1.922023143,0,Class III noise
+5,2,2,0.48,0.538461538,1.757865168,1.833927218,0,Not complex enough for class IV
+6,7,2,0.336,0.461538462,1.356340475,1.669180337,0,Not complex enough for class IV
+7,3,2,0.256,0.384615385,1.157711847,1.546593564,0,Not complex enough for class IV
+8,1,0,0.232,0.307692308,1.003633901,1.198183948,0,Solid black
+9,9,0,0.152,0.230769231,0.660038539,0.991264261,0,Solid black
+10,4,0,0.032,0.153846154,0.230285571,0.773228349,0,Solid black
+11,11,0,0.008,0.076923077,0.067221545,0.391243564,0,Solid black
+12,12,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,14,,,,,,,
+Rule:,3.21E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.754832681,2.075869297,0,Class II with solid blue and oscillations
+1,12,0,0.984,0.846153846,1.784048462,2.133937566,0,Class II with solid blue and oscillations
+2,1,0,0.96,0.769230769,1.838813667,2.075869297,0,Class II with solid blue and oscillations
+3,10,0,0.912,0.692307692,1.900120774,2.038159682,0,Class II with solid blue and oscillations
+4,11,0,0.888,0.615384615,1.958075528,2.038159682,0,Class II with solid blue and oscillations
+5,7,0,0.744,0.538461538,2.147605133,1.987773371,0,Class II with solid blue and oscillations
+6,8,0,0.624,0.461538462,1.807906597,1.669180337,0,Class II with solid blue and oscillations
+7,9,0,0.544,0.384615385,1.624555958,1.488525295,0,Class II with solid blue and oscillations
+8,3,1,0.464,0.307692308,1.579457211,1.352030102,0,Complex and chaotic with stalactites
+9,2,0,0.416,0.230769231,1.340101675,0.991264261,0,Solid black
+10,5,0,0.272,0.153846154,1.113597933,0.773228349,0,Solid black
+11,6,0,0.12,0.076923077,0.529360865,0.391243564,0,Solid black
+12,4,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,15,,,,,,,
+Rule:,3.31E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.873980643,2.199687795,0,Complex with no chaos
+1,4,0,0.872,0.846153846,1.97581177,2.199687795,0,Class I solid lines
+2,7,0,0.728,0.769230769,2.059845175,2.199687795,0,Class I solid lines
+3,2,1,0.68,0.692307692,1.960696277,2.16197818,0,Very complex with stalactites in holes
+4,5,2,0.536,0.615384615,1.756703341,2.038159682,0,Class III noise
+5,6,2,0.384,0.538461538,1.613841667,1.987773371,0,Class III noise
+6,12,2,0.376,0.461538462,1.601011414,1.88109476,0,Solid black
+7,3,0,0.296,0.384615385,1.435606906,1.700439718,0,Solid black
+8,1,0,0.272,0.307692308,1.331411367,1.505876256,0,Solid black
+9,11,0,0.248,0.230769231,1.178074149,1.145110414,0,Solid black
+10,10,0,0.2,0.153846154,0.916118214,0.773228349,0,Solid black
+11,8,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black
+12,9,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,16,,,,,,,
+Rule:,2.41E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.871952924,2.10390991,0,Solid green
+1,8,2,0.872,0.846153846,2.163983039,2.199687795,0,Very close to class IV
+2,12,2,0.864,0.769230769,2.16854653,2.23739741,0,Very close to class IV
+3,7,1,0.72,0.692307692,2.226106069,2.199687795,0,Complex with rustic patterns in holes
+4,6,2,0.568,0.615384615,1.980886951,2.075869297,0,Standard III pattern
+5,10,2,0.52,0.538461538,1.755769066,1.775858948,0,Standard III pattern
+6,3,2,0.44,0.461538462,1.42443231,1.457265914,0,Standard III pattern
+7,11,2,0.416,0.384615385,1.38437673,1.334679141,0,Standard III pattern
+8,4,0,0.296,0.307692308,1.06562554,1.140115679,0,Solid black
+9,2,0,0.248,0.230769231,0.808092783,0.779349837,0,Solid black
+10,5,0,0.104,0.153846154,0.481548544,0.619382195,0,Solid black
+11,1,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black
+12,9,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,17,,,,,,,
+Rule:,2.14E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.666116079,2.038159682,0,Class II oscillations
+1,4,0,0.872,0.846153846,2.028204865,2.16197818,0,Class II oscillations
+2,7,2,0.728,0.769230769,2.133957449,2.199687795,0,Class III noise
+3,6,2,0.576,0.692307692,1.984263338,2.16197818,0,Clear pattern with some random shapes
+4,9,2,0.496,0.615384615,1.74715916,2.038159682,0,Clear pattern with some random shapes
+5,8,2,0.376,0.538461538,1.306444128,1.738149333,0,Clear pattern with some random shapes
+6,2,0,0.328,0.461538462,1.09010968,1.573402452,0,Solid black
+7,5,0,0.184,0.384615385,0.837361124,1.488525295,0,Solid black
+8,12,0,0.176,0.307692308,0.772383768,1.140115679,0,Solid black
+9,3,0,0.096,0.230769231,0.534068803,0.991264261,0,Solid black
+10,10,0,0.048,0.153846154,0.325839574,0.773228349,0,Solid black
+11,1,0,0.024,0.076923077,0.163345543,0.391243564,0,Solid black
+12,11,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,18,,,,,,,
+Rule:,1.13E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.821143559,2.199687795,0,Class III noise
+1,11,2,0.968,0.846153846,1.890828541,2.257756064,0,Class III noise
+2,12,2,0.96,0.769230769,1.905124545,2.199687795,0,Class III noise
+3,1,2,0.936,0.692307692,1.930672141,2.16197818,0,Class III noise
+4,6,2,0.784,0.615384615,2.182262734,2.133937566,0,Class III noise
+5,5,2,0.64,0.538461538,2.170115158,2.045841641,0,Class III noise
+6,8,2,0.52,0.461538462,1.780701658,1.727248606,0,Class III noise
+7,7,2,0.376,0.384615385,1.505011414,1.546593564,0,Becoming more than noise but still III
+8,9,2,0.296,0.307692308,1.339606906,1.352030102,0,Textbook class III
+9,4,2,0.176,0.230769231,0.846197203,0.991264261,0,Class III with solid lines running down
+10,2,2,0.128,0.153846154,0.674095106,0.773228349,0,Textbook class III
+11,10,2,0.08,0.076923077,0.40217919,0.391243564,0,Textbook class III
+12,3,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,19,,,,,,,
+Rule:,4.31E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.013025476,1.88109476,0,Solid yellow
+1,10,0,0.944,0.846153846,0.9798918,1.727248606,0,Solid yellow
+2,2,0,0.896,0.769230769,1.139002561,1.833927218,0,Solid yellow
+3,4,0,0.776,0.692307692,1.394057071,1.884313528,0,Two solid lines on yellow
+4,7,1,0.632,0.615384615,1.530986384,1.884313528,0,Very complex and exhibits clear IV behavior
+5,12,0,0.624,0.538461538,1.501092676,1.738149333,0,Interesting oscillations -- Class II
+6,3,0,0.544,0.461538462,1.276626868,1.573402452,0,Periodic pattern of solid black/yellow
+7,1,0,0.52,0.384615385,1.139156329,1.238901257,0,Periodic pattern of solid black/yellow
+8,8,0,0.4,0.307692308,1.101928562,1.140115679,0,Periodic pattern of solid black/yellow
+9,5,0,0.256,0.230769231,0.935559438,0.991264261,0,Periodic pattern of solid black/yellow
+10,11,0,0.232,0.153846154,0.781481493,0.619382195,0,Periodic pattern of solid black/yellow
+11,6,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black
+12,9,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,20,,,,,,,
+Rule:,1.34E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.91414831,2.10390991,0,Solid yellow
+1,8,2,0.872,0.846153846,2.242929593,2.199687795,0,Borderline class IV
+2,7,2,0.728,0.769230769,1.971608901,1.987773371,0,Mainly class III noise
+3,2,2,0.68,0.692307692,1.971608901,1.950063756,0,Mainly class III noise
+4,3,2,0.6,0.615384615,1.888244169,1.922023143,0,Class III complexity/chaos
+5,11,2,0.576,0.538461538,1.859551846,1.833927218,0,Class III complexity/chaos
+6,4,2,0.456,0.461538462,1.714715244,1.669180337,0,Class III complexity/chaos
+7,5,2,0.312,0.384615385,1.304895105,1.488525295,0,Class III complexity/chaos
+8,9,2,0.232,0.307692308,1.067597126,1.352030102,0,Class III complexity/chaos
+9,6,2,0.08,0.230769231,0.472682462,0.991264261,0,Class III complexity/chaos
+10,1,0,0.056,0.153846154,0.31135737,0.619382195,0,Solid black
+11,12,0,0.048,0.076923077,0.277839574,0.391243564,0,Solid black
+12,10,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,21,,,,,,,
+Rule:,1.43E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.995607449,2.199687795,0,Class III noise
+1,5,2,0.848,0.846153846,2.274864125,2.295465679,0,Class III noise
+2,10,2,0.8,0.769230769,2.291647316,2.295465679,0,Class III noise
+3,3,2,0.72,0.692307692,2.244163676,2.199687795,0,Class III noise
+4,9,2,0.64,0.615384615,2.206772898,2.133937566,0,More intersting but still mainly noise
+5,1,2,0.616,0.538461538,2.180041317,2.045841641,0,More intersting but still mainly noise
+6,6,2,0.464,0.461538462,1.764751607,1.88109476,0,More intersting but still mainly noise
+7,4,0,0.344,0.384615385,1.408051398,1.700439718,0,Solid black
+8,12,0,0.336,0.307692308,1.345579331,1.352030102,0,Solid black
+9,11,0,0.312,0.230769231,1.195374462,0.991264261,0,Solid black
+10,2,0,0.264,0.153846154,1.095146613,0.773228349,0,Solid black
+11,8,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,7,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,22,,,,,,,
+Rule:,4.14E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.895994689,2.038159682,0,"Very close to being class IV, lacks the complexity"
+1,4,2,0.872,0.846153846,2.122099599,2.133937566,0,Mainly class III noise
+2,2,0,0.824,0.769230769,2.180487985,2.199687795,0,Solid black
+3,8,0,0.704,0.692307692,2.154600601,2.10390991,0,Class II oscillations
+4,10,0,0.656,0.615384615,2.090802973,2.038159682,0,Class II oscillations
+5,12,0,0.648,0.538461538,2.089978186,1.987773371,0,Solid black
+6,11,0,0.624,0.461538462,2.084191502,1.88109476,0,Solid black
+7,5,0,0.48,0.384615385,1.641554847,1.546593564,0,Solid black
+8,7,0,0.336,0.307692308,1.436473142,1.352030102,0,Solid black
+9,6,0,0.184,0.230769231,0.870485227,0.991264261,0,Solid black
+10,3,0,0.104,0.153846154,0.562600927,0.773228349,0,Solid black
+11,9,0,0.024,0.076923077,0.163345543,0.391243564,0,Solid black
+12,1,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,23,,,,,,,
+Rule:,1.31E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,2.022737312,2.133937566,0,Interesting III behavior
+1,1,2,0.968,0.846153846,2.114936557,2.257756064,0,Interesting III behavior
+2,8,1,0.848,0.769230769,2.147082702,2.199687795,0,Random colors and patterns like a waterfall
+3,3,1,0.768,0.692307692,2.160856128,2.199687795,0,"Large holes with some stalactites, very complex"
+4,9,0,0.688,0.615384615,2.134002262,2.133937566,0,Class II oscillations
+5,12,0,0.68,0.538461538,2.126981402,2.045841641,0,Class I pattern with solid color
+6,6,0,0.528,0.461538462,1.800211738,1.88109476,0,Solid black
+7,11,0,0.504,0.384615385,1.661576987,1.546593564,0,Solid black
+8,5,0,0.36,0.307692308,1.457293577,1.352030102,0,Solid black
+9,4,0,0.24,0.230769231,1.124068422,1.145110414,0,Solid black
+10,7,0,0.096,0.153846154,0.552186103,0.773228349,0,Solid black
+11,2,0,0.048,0.076923077,0.277839574,0.391243564,0,Solid black
+12,10,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,24,,,,,,,
+Rule:,2.24E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.574579164,1.826245258,0,Basically no complexity in pattern
+1,12,2,0.984,0.846153846,1.607499388,1.884313528,0,Class III noise
+2,6,2,0.832,0.769230769,1.945286869,1.950063756,0,Class III noise
+3,10,2,0.784,0.692307692,1.969498007,1.950063756,0,Class III noise
+4,8,2,0.664,0.615384615,1.969498007,1.922023143,0,Borderline class IV
+5,5,2,0.52,0.538461538,1.78980413,1.833927218,0,Borderline class IV
+6,3,1,0.44,0.461538462,1.539519757,1.669180337,0,blue color/patterns filling in holes
+7,2,0,0.392,0.384615385,1.462324691,1.546593564,0,Solid black
+8,1,0,0.368,0.307692308,1.414515314,1.352030102,0,Solid black
+9,7,0,0.224,0.230769231,0.877441581,0.991264261,0,Solid black
+10,11,0,0.2,0.153846154,0.721928095,0.619382195,0,Solid black
+11,9,0,0.12,0.076923077,0.529360865,0.391243564,0,Solid black
+12,4,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,25,,,,,,,
+Rule:,4.12E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,1,0.992,0.923076923,1.898610812,2.199687795,0,Subtle very complex patterns
+1,7,2,0.848,0.846153846,2.208749127,2.295465679,0,Class III noise
+2,6,2,0.696,0.769230769,2.224171808,2.295465679,0,Class III noise
+3,3,0,0.616,0.692307692,1.979346154,2.199687795,0,Solid black
+4,4,0,0.496,0.615384615,1.803424445,2.133937566,0,Solid black
+5,8,0,0.376,0.538461538,1.507713669,1.987773371,0,Solid black
+6,11,0,0.352,0.461538462,1.440673335,1.823026491,0,Solid black
+7,9,0,0.272,0.384615385,1.076975886,1.488525295,0,Solid black
+8,1,0,0.248,0.307692308,1.032342468,1.352030102,0,Class I solid lines
+9,12,0,0.24,0.230769231,0.968303022,0.991264261,0,Class I solid lines
+10,10,0,0.192,0.153846154,0.861402006,0.773228349,0,Class I solid lines
+11,2,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,5,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,26,,,,,,,
+Rule:,3.13E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.78853402,2.038159682,0,Complexity does not reach class IV
+1,4,0,0.872,0.846153846,1.985360892,2.038159682,0,Periodic pattern
+2,1,0,0.848,0.769230769,2.005742214,2.075869297,0,Periodic pattern
+3,2,0,0.8,0.692307692,2.065487973,2.10390991,0,Periodic pattern
+4,7,0,0.656,0.615384615,2.09994971,2.075869297,0,Complexity of class III
+5,10,0,0.608,0.538461538,1.889696726,1.775858948,0,Complexity of class III
+6,5,0,0.464,0.461538462,1.683034133,1.669180337,0,Complexity of class III
+7,3,0,0.384,0.384615385,1.560262678,1.546593564,0,Solid class I lines
+8,9,0,0.304,0.307692308,1.283121145,1.352030102,0,Solid class I lines
+9,8,0,0.184,0.230769231,0.79153761,0.991264261,0,Solid class I lines
+10,12,0,0.176,0.153846154,0.772383768,0.773228349,0,Solid class I lines
+11,11,0,0.152,0.076923077,0.614822757,0.391243564,0,Solid class I lines
+12,6,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,27,,,,,,,
+Rule:,4.31E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.677853088,2.10390991,0,Solid green
+1,7,2,0.848,0.846153846,2.059732851,2.199687795,0,Interesting: mini stalactites. Could go either way.
+2,3,1,0.768,0.769230769,2.0690976,2.199687795,0,Very complex with stalactites in holes along with multi-colored patterns
+3,8,1,0.648,0.692307692,1.975057101,2.199687795,0,Very complex with stalactites in holes along with multi-colored patterns
+4,6,1,0.496,0.615384615,1.870550225,2.133937566,0,Very complex with stalactites in holes along with multi-colored patterns
+5,12,1,0.488,0.538461538,1.852677327,2.045841641,0,Very complex with stalactites in holes along with multi-colored patterns
+6,5,1,0.344,0.461538462,1.510357812,1.88109476,0,Very complex with stalactites in holes along with multi-colored patterns
+7,4,0,0.224,0.384615385,1.173210688,1.700439718,0,Class II oscillations
+8,1,0,0.2,0.307692308,1.017697202,1.352030102,0,Class II oscillations
+9,11,0,0.176,0.230769231,0.942197203,1.145110414,0,Class II oscillations
+10,2,0,0.128,0.153846154,0.674095106,0.773228349,0,Solid black
+11,10,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black
+12,9,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,28,,,,,,,
+Rule:,3.12E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.943202009,2.045841641,0,Periodic pattern
+1,11,2,0.968,0.846153846,2.050297806,2.192005835,0,Class III noise
+2,9,2,0.888,0.769230769,2.147818421,2.133937566,0,Class III noise
+3,6,1,0.736,0.692307692,1.98934299,2.038159682,0,Complex pattern with multi pattern/color holes
+4,8,1,0.616,0.615384615,1.645264308,1.76049503,0,Complex pattern with multi pattern/color holes
+5,12,1,0.608,0.538461538,1.645499867,1.738149333,0,Complex pattern with multi pattern/color holes
+6,3,1,0.528,0.461538462,1.621779373,1.669180337,0,Large gaps and very unique/complex patterns
+7,10,1,0.48,0.384615385,1.584081074,1.546593564,0,Large gaps and very unique/complex patterns
+8,5,0,0.336,0.307692308,1.345579331,1.352030102,0,Class II oscillations
+9,2,0,0.288,0.230769231,1.24772691,1.145110414,0,Solid black
+10,1,0,0.264,0.153846154,1.095146613,0.773228349,0,Class I solid line
+11,4,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,7,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,29,,,,,,,
+Rule:,4.44E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.936120389,1.88109476,0,Periodic patterns
+1,7,0,0.848,0.846153846,2.153328583,1.88109476,0,Periodic patterns
+2,8,2,0.728,0.769230769,1.884050543,1.669180337,0,Lacks complexity of a class IV
+3,12,2,0.72,0.692307692,1.888448255,1.738149333,0,Lacks complexity of a class IV
+4,6,2,0.568,0.615384615,1.484221081,1.460484681,0,Lacks complexity of a class IV
+5,3,2,0.488,0.538461538,1.452857967,1.460484681,0,Lacks complexity of a class IV
+6,9,2,0.408,0.461538462,1.374224822,1.419556299,0,Lacks complexity of a class IV
+7,11,2,0.384,0.384615385,1.340478748,1.334679141,0,Lacks complexity of a class IV
+8,1,0,0.36,0.307692308,1.301528177,1.198183948,0,Solid black
+9,2,0,0.312,0.230769231,1.206135606,0.991264261,0,Solid black
+10,10,0,0.264,0.153846154,1.095146613,0.773228349,0,Solid black
+11,4,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,5,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,30,,,,,,,
+Rule:,2.12E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.598378059,1.914341184,0,Class III noise
+1,1,2,0.968,0.846153846,1.702673518,2.038159682,0,Class III noise
+2,10,2,0.92,0.769230769,1.62499747,1.826245258,0,Class III noise
+3,11,2,0.896,0.692307692,1.671941711,1.826245258,0,Class III noise
+4,7,2,0.752,0.615384615,1.847477219,1.826245258,0,Class III noise
+5,6,1,0.6,0.538461538,1.790992521,1.775858948,0,Interesting complexity and gaps
+6,8,1,0.48,0.461538462,1.706691307,1.669180337,0,Interesting complexity and gaps
+7,5,1,0.336,0.384615385,1.416389642,1.488525295,0,Interesting complexity and gaps -- more colors than above
+8,3,0,0.256,0.307692308,1.050035917,1.140115679,0,Solid black
+9,12,0,0.248,0.230769231,1.033069894,0.991264261,0,Solid black
+10,9,0,0.168,0.153846154,0.653109112,0.619382195,0,Blue lines - Class I
+11,4,0,0.048,0.076923077,0.277839574,0.391243564,0,Blue lines - Class I
+12,2,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,31,,,,,,,
+Rule:,3.41E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.84821898,2.16197818,0,Interesting but not complex enough for IV
+1,2,2,0.944,0.846153846,2.026829651,2.257756064,0,Interesting but not complex enough for IV
+2,7,0,0.8,0.769230769,2.173427314,2.295465679,0,Periodic patterns
+3,3,0,0.72,0.692307692,2.125943674,2.199687795,0,Periodic patterns
+4,1,0,0.696,0.615384615,2.070929354,2.075869297,0,Periodic patterns
+5,11,0,0.672,0.538461538,2.048197244,1.987773371,0,Class II oscillations
+6,5,0,0.528,0.461538462,1.674551764,1.823026491,0,Class II oscillations
+7,4,0,0.408,0.384615385,1.243989762,1.488525295,0,Class II oscillations
+8,6,0,0.256,0.307692308,1.047800691,1.352030102,0,Class I solid lines
+9,9,0,0.176,0.230769231,0.863202779,1.145110414,0,Class I solid lines
+10,10,0,0.128,0.153846154,0.595100682,0.773228349,0,Class I solid lines
+11,12,0,0.12,0.076923077,0.529360865,0.391243564,0,Class I solid lines
+12,8,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,32,,,,,,,
+Rule:,1.13E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,2.001449694,2.199687795,0,Could be class IV - note random coloring
+1,11,2,0.968,0.846153846,2.088047737,2.295465679,0,Class III noise
+2,6,2,0.816,0.769230769,2.312661028,2.295465679,0,Class III noise
+3,7,2,0.672,0.692307692,2.210340979,2.257756064,0,Class III noise
+4,2,2,0.624,0.615384615,2.168239002,2.192005835,0,Class III noise
+5,8,2,0.504,0.538461538,1.917314167,2.045841641,0,Class III noise
+6,9,2,0.424,0.461538462,1.621148719,1.88109476,0,No chaos or no complexity
+7,3,2,0.344,0.384615385,1.464415771,1.700439718,0,No chaos or no complexity
+8,10,2,0.296,0.307692308,1.211608227,1.352030102,0,No chaos or no complexity
+9,4,2,0.176,0.230769231,0.718198523,0.991264261,0,No chaos or no complexity
+10,12,2,0.168,0.153846154,0.653109112,0.619382195,0,No chaos or no complexity
+11,5,2,0.024,0.076923077,0.163345543,0.391243564,0,No chaos or no complexity
+12,1,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,33,,,,,,,
+Rule:,1.31E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.9193349,2.199687795,0,Class III noise
+1,11,2,0.968,0.846153846,2.003411164,2.257756064,0,Class III noise
+2,9,0,0.888,0.769230769,2.10093178,2.199687795,0,Oscillations of class II going downward
+3,7,2,0.744,0.692307692,2.119145424,2.16197818,0,Class III noise
+4,5,2,0.6,0.615384615,2.113928522,2.133937566,0,Class III noise
+5,3,1,0.52,0.538461538,1.882970142,1.987773371,0,Interesting gap sequence here.
+6,2,0,0.472,0.461538462,1.82670698,1.88109476,0,Solid green lines
+7,10,0,0.424,0.384615385,1.74735653,1.700439718,0,Solid green lines
+8,6,0,0.272,0.307692308,1.209243815,1.352030102,0,Solid green lines
+9,1,0,0.248,0.230769231,1.055906597,0.991264261,0,Solid green lines
+10,8,0,0.128,0.153846154,0.595100682,0.773228349,0,Solid green lines
+11,12,0,0.12,0.076923077,0.529360865,0.391243564,0,Solid green lines
+12,4,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,34,,,,,,,
+Rule:,4.44E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.821143559,2.10390991,0,Solid green
+1,3,0,0.912,0.846153846,1.934163958,2.16197818,0,Solid green
+2,11,0,0.888,0.769230769,1.960246454,2.199687795,0,Solid green
+3,7,2,0.744,0.692307692,2.138231645,2.199687795,0,Class III noise
+4,4,0,0.624,0.615384615,1.798533109,1.922023143,0,Class II periodic
+5,9,0,0.544,0.538461538,1.765190707,1.833927218,0,Class II periodic
+6,12,0,0.536,0.461538462,1.75534381,1.727248606,0,Class II periodic
+7,2,0,0.488,0.384615385,1.591642492,1.546593564,0,Class II periodic
+8,1,0,0.464,0.307692308,1.450257786,1.198183948,0,Solid black
+9,6,0,0.312,0.230769231,1.195374462,0.991264261,0,Solid black
+10,8,0,0.192,0.153846154,0.705636606,0.619382195,0,Solid black
+11,10,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,5,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,35,,,,,,,
+Rule:,3.23E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.454396156,1.987773371,0,Class III noise
+1,10,2,0.944,0.846153846,1.663525719,2.133937566,0,Class III noise
+2,8,2,0.824,0.769230769,1.924477846,2.199687795,0,Class III noise
+3,5,2,0.68,0.692307692,1.76255542,2.10390991,0,Class III noise
+4,4,1,0.56,0.615384615,1.76255542,2.075869297,0,Chaotic patterns overlapping/ color fills
+5,9,1,0.48,0.538461538,1.622212101,1.987773371,0,Bizarre patterns intertwined together
+6,11,1,0.456,0.461538462,1.603282372,1.88109476,0,Similar to above but more borderline
+7,12,0,0.448,0.384615385,1.542956658,1.546593564,0,Class II spacing
+8,7,2,0.304,0.307692308,1.326886699,1.352030102,0,Class III complexity
+9,2,2,0.256,0.230769231,1.070119416,0.991264261,0,Class III complexity
+10,6,2,0.104,0.153846154,0.481548544,0.619382195,0,Class III complexity
+11,3,0,0.024,0.076923077,0.163345543,0.391243564,0,Solid black
+12,1,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,36,,,,,,,
+Rule:,4.33E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,2.009162706,2.10390991,0,Interesting pattern but periodic
+1,3,2,0.912,0.846153846,2.219675219,2.199687795,0,Class III noise
+2,1,2,0.888,0.769230769,2.254899803,2.199687795,0,Class III noise
+3,4,0,0.768,0.692307692,2.285522811,2.10390991,0,Class II periodic oscillations
+4,5,0,0.624,0.615384615,1.924518194,1.826245258,0,Solid black
+5,7,0,0.48,0.538461538,1.68023344,1.738149333,0,Solid black
+6,12,0,0.472,0.461538462,1.671783923,1.669180337,0,Solid black
+7,2,0,0.424,0.384615385,1.499542717,1.488525295,0,Solid black
+8,6,0,0.272,0.307692308,0.961430002,1.140115679,0,Solid black
+9,9,0,0.192,0.230769231,0.81000098,0.991264261,0,Solid black
+10,11,0,0.168,0.153846154,0.653109112,0.619382195,0,Solid black
+11,10,0,0.12,0.076923077,0.529360865,0.391243564,0,Solid black
+12,8,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,37,,,,,,,
+Rule:,3.44E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.756875334,2.075869297,0,Periodic class II
+1,7,0,0.848,0.846153846,1.711659552,1.922023143,0,Periodic class II
+2,11,0,0.824,0.769230769,1.699638839,1.922023143,0,More complex but still class II
+3,2,1,0.776,0.692307692,1.765949717,1.950063756,0,Gaps filled in with unique patterns and colors
+4,1,0,0.752,0.615384615,1.733248017,1.826245258,0,More complex but still class II
+5,8,2,0.632,0.538461538,1.556865992,1.738149333,0,Typical class III behavior
+6,12,2,0.624,0.461538462,1.534145059,1.573402452,0,Typical class III behavior
+7,4,0,0.504,0.384615385,1.534145059,1.488525295,0,Solid black
+8,10,0,0.456,0.307692308,1.299924843,1.140115679,0,Solid black
+9,6,0,0.304,0.230769231,1.138893861,0.991264261,0,Solid black
+10,9,0,0.224,0.153846154,0.767404417,0.619382195,0,Solid black
+11,3,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,5,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,38,,,,,,,
+Rule:,3.42E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,0,0.992,0.923076923,1.840427995,1.987773371,0,Solid yellow
+1,12,2,0.984,0.846153846,1.87977518,2.133937566,0,Class III noise
+2,9,2,0.904,0.769230769,2.089548817,2.199687795,0,Class III noise
+3,5,2,0.76,0.692307692,1.955921701,2.10390991,0,Class III noise
+4,7,2,0.616,0.615384615,1.955921701,2.038159682,0,Class III noise
+5,6,2,0.464,0.538461538,1.764086517,1.987773371,0,Class III noise
+6,11,2,0.44,0.461538462,1.707782305,1.88109476,0,Class III noise
+7,2,0,0.392,0.384615385,1.561519066,1.700439718,0,Class II periodic oscillations
+8,10,0,0.344,0.307692308,1.313783079,1.352030102,0,Class II periodic oscillations
+9,8,0,0.224,0.230769231,1.0716317,1.145110414,0,Class II periodic oscillations
+10,1,0,0.2,0.153846154,0.916118214,0.773228349,0,Solid black
+11,4,0,0.08,0.076923077,0.40217919,0.391243564,0,Solid black
+12,3,0,0,0,0,0,0,Solid black
+,,,,,,,,
+,,,,,,,,
+Experiment #:,39,,,,,,,
+Rule:,2.24E+11,,,,,,,
+Step,Entry Zeroed,Class,Lambda,Lambda_t,H,H_t,Zeta,Observations
+0,-,2,0.992,0.923076923,1.855325278,2.133937566,0,Class III noise
+1,2,2,0.944,0.846153846,2.036825525,2.257756064,0,Class III noise
+2,11,2,0.92,0.769230769,2.032439554,2.199687795,0,Class III noise
+3,6,0,0.768,0.692307692,2.032439554,2.10390991,0,Class II complex periodic
+4,4,0,0.648,0.615384615,1.975876125,2.038159682,0,Class II periodic
+5,3,0,0.568,0.538461538,1.677238902,1.738149333,0,Solid black
+6,8,0,0.448,0.461538462,1.595474917,1.669180337,0,Solid black
+7,1,0,0.424,0.384615385,1.565296799,1.546593564,0,Solid black
+8,10,0,0.376,0.307692308,1.321160816,1.198183948,0,Solid black
+9,9,0,0.296,0.230769231,1.172190243,0.991264261,0,Solid black
+10,5,0,0.152,0.153846154,0.614822757,0.619382195,0,Solid black
+11,12,0,0.144,0.076923077,0.594619344,0.391243564,0,Solid black
+12,7,0,0,0,0,0,0,Solid black
