@@ -127,7 +127,7 @@ public class HopfieldNet
             stable_count_avg[i] = stable_average[i] / num_sims;
             unstable_prob_avg[i] /= num_sims;
         }
-       // Write_to_CSV(unstable_prob_avg, stable_count_avg);
+        Write_to_CSV(unstable_prob_avg, stable_count_avg);
 
     }
 
