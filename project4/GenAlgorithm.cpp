@@ -8,6 +8,8 @@
 #include <string>
 #include <cstdlib>
 #include <vector>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 class GEN
@@ -15,7 +17,12 @@ class GEN
 	private:
 		int gene, pop_size, num_gens;
 		double mutate_prob, cross_p;
-		vector< vector<int> > Init_Bitstring();
+		vector <double> fitness;
+		vector<double> total_fitness;
+		vector<double> normal_fitness;
+		vector <vector <int> > bit_s;
+		void Init_Bitstring();
+		void calc_fitness();
 	public:
 		GEN(int, int, int, double, double);
 		void print();
@@ -31,34 +38,65 @@ GEN::GEN(int g, int ps, int ng, double mp, double cp)
 	cross_p  = cp;
 }
 
-vector<vector<int> > GEN::Init_Bitstring()
+void GEN::Init_Bitstring()
 {
 	srand(time(NULL));
-	vector< vector<int> > bit_strings;
-	bit_strings.resize(pop_size);
+	bit_s.resize(pop_size);
 	for (int i = 0; i < pop_size; i++)
 	{
-		bit_strings[i].resize(gene);
+		bit_s[i].resize(gene);
 		for (int j = 0; j < gene; j++)
 		{
-			bit_strings[i][j] = rand() % 2;
+			bit_s[i][j] = rand() % 2;
 		}
 	}
-	return bit_strings;
+}
+/* March 8 update: Check on fitness vals. Messing everything else up. */
+void GEN::calc_fitness()
+{
+	unsigned int i, j;
+	int index;
+	int bit_sum = 0;
+	double fit_level = 0;
+	double total_fit_count = 0;
+	double normal_fit_sum = 0;
+	
+	Init_Bitstring();
+	fitness.resize(bit_s.size());
+	total_fitness.resize(fitness.size());
+	normal_fitness.resize(total_fitness.size());
+	
+	for (i = 0; i < bit_s.size(); i++)
+	{
+		index = gene - 1;
+		bit_sum = 0;
+		for (j = 0; j < bit_s[i].size(); j++)
+		{
+			if (bit_s[i][j] == 1) bit_sum += pow(2, index);
+			else bit_sum += 1;
+			index--;
+		}
+		fit_level = pow( ((double)bit_sum/(pow(2,gene))), 10);	
+		fitness[i] = fit_level;
+
+		total_fit_count += fit_level;
+		total_fitness[i] = total_fit_count;
+		normal_fitness[i] = fitness[i] / total_fitness[i];
+		normal_fit_sum += normal_fitness[i];
+	}
+
 }
 
+/* For testing purposes only. I know its ugly lol. */
 void GEN::print()
 {
-	printf("%d %d %d %f %f\n", gene, pop_size, num_gens, mutate_prob, cross_p);
-	vector< vector<int> > bit_strings = Init_Bitstring();
-	for (unsigned int i = 0; i < bit_strings.size(); i++)
+	calc_fitness();
+	cout << "Individual " << setw(17) << "Fitness Value " << setw(20) << right << "Normalized Fitness" << setw(15) << "Running Total" << endl;
+	for (unsigned int i = 0; i < fitness.size(); i++)
 	{
-		for (unsigned int j = 0; j < bit_strings[i].size(); j++)
-		{
-			cout << bit_strings[i][j] << " ";
-		}
-		cout << endl;
+		cout << setw(5) << i << setw(20)<<right<<fixed<< fitness[i] << setw(20) << normal_fitness[i] << setw(15) << right << total_fitness[i] << endl; 
 	}
+	cout << endl;
 }
 
 int main(int argc, char *argv[])
