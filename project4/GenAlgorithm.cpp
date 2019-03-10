@@ -10,7 +10,10 @@
 #include <vector>
 #include <cmath>
 #include <iomanip>
+#include <algorithm>
+
 using namespace std;
+
 
 class GEN
 {
@@ -25,12 +28,12 @@ class GEN
 		vector <vector <int> > offspring;
 		void Init_Bitstring();
 		void calc_fitness();
-		void select_parents();
-		void update(vector< vector<int> >, vector<vector<int> >);
+		void run();
+		vector<vector<int> > update(vector< vector<int> >, vector<vector<int> >);
 		int most_fit(vector<double>);
 	public:
 		GEN(int, int, int, double, double);
-		void print();
+		void show();
 
 };
 
@@ -43,7 +46,7 @@ GEN::GEN(int g, int ps, int ng, double mp, double cp)
 	cross_p  = cp;
 }
 
-void GEN::update(vector< vector<int> > source, vector< vector<int> > dest)
+vector<vector<int> > GEN::update(vector< vector<int> > source, vector< vector<int> > dest)
 {
 	for (unsigned int i = 0; i < source.size(); i++)
 	{
@@ -52,17 +55,17 @@ void GEN::update(vector< vector<int> > source, vector< vector<int> > dest)
 			dest[i][j] = source[i][j];
 		}
 	}
+	return dest;
 }
 
 int GEN::most_fit(vector<double> fitness)
 {
-	int max = -1;
+	double max = -1.0;
 	int max_index = 0;
 	for (int i = 0; i < pop_size; i++)
 	{
 		if (fitness[i] > max)
 		{
-			cout << "new max at: " << i << endl;
 			max = fitness[i];
 			max_index = i;
 		}
@@ -130,7 +133,7 @@ void GEN::calc_fitness()
 
 }
 
-void GEN::select_parents()
+void GEN::run()
 {
 	/*****************when done add a wrapper around this for the number of generations!!!!***************/
 	double crossover, mutation, range1, range2;
@@ -181,7 +184,6 @@ void GEN::select_parents()
 				offspring[(i*2)+1][j] = bit_s[parent_two][j];
 			}
 		}
-		
 		/*Mutation calcs*/
 		for (int j = 0; j < gene; j++)
 		{
@@ -202,15 +204,24 @@ void GEN::select_parents()
 	}
 	
 	/*update function*/
-	update(bit_s, offspring);
+	bit_s = update(offspring, bit_s);
+	
 	int max_index = most_fit(fitness);
+	
+	int bit_count = 0;
+	vector<int> ind_string = bit_s.at(max_index);
+	for (unsigned int j = 0; j < ind_string.size(); j++)
+	{
+		if (ind_string[j] == 1) bit_count++;
+	}
 	cout << "Max index is: " << max_index << endl;
+	cout << "Max index 1's: " << bit_count << endl;
 }
 
 /* For testing purposes only. */
-void GEN::print()
+void GEN::show()
 {
-	select_parents();
+	run();
 	cout << "Individual " << setw(17) << "Fitness Value " << setw(20) << right << "Normalized Fitness" << setw(15) << "Running Total" << endl;
 	for (unsigned int i = 0; i < fitness.size(); i++)
 	{
@@ -229,7 +240,7 @@ int main(int argc, char *argv[])
 	double cross_prob = atof(argv[5]);
 
 	GEN g(genes, pop_size, num_gens, mutation_prob, cross_prob);
-	g.print();
+	g.show();
 	
 	return 0;
 }
