@@ -22,9 +22,12 @@ class GEN
 		vector<double> normal_fitness;
 		vector<double> normal_fitness_total;
 		vector <vector <int> > bit_s;
+		vector <vector <int> > offspring;
 		void Init_Bitstring();
 		void calc_fitness();
 		void select_parents();
+		void update(vector< vector<int> >, vector<vector<int> >);
+		int most_fit(vector<double>);
 	public:
 		GEN(int, int, int, double, double);
 		void print();
@@ -40,13 +43,42 @@ GEN::GEN(int g, int ps, int ng, double mp, double cp)
 	cross_p  = cp;
 }
 
+void GEN::update(vector< vector<int> > source, vector< vector<int> > dest)
+{
+	for (unsigned int i = 0; i < source.size(); i++)
+	{
+		for (unsigned int j = 0; j < source[i].size(); j++)
+		{
+			dest[i][j] = source[i][j];
+		}
+	}
+}
+
+int GEN::most_fit(vector<double> fitness)
+{
+	int max = -1;
+	int max_index = 0;
+	for (int i = 0; i < pop_size; i++)
+	{
+		if (fitness[i] > max)
+		{
+			cout << "new max at: " << i << endl;
+			max = fitness[i];
+			max_index = i;
+		}
+	}
+	return max_index;
+}
+
 void GEN::Init_Bitstring()
 {
 	srand(time(NULL));
 	bit_s.resize(pop_size);
+	offspring.resize(pop_size);
 	for (int i = 0; i < pop_size; i++)
 	{
 		bit_s[i].resize(gene);
+		offspring[i].resize(gene);
 		for (int j = 0; j < gene; j++)
 		{
 			bit_s[i][j] = rand() % 2;
@@ -100,17 +132,85 @@ void GEN::calc_fitness()
 
 void GEN::select_parents()
 {
+	/*****************when done add a wrapper around this for the number of generations!!!!***************/
+	double crossover, mutation, range1, range2;
+	int k, i, cross_iterations, parent_one = 0, parent_two = 0;
 	srand(time(NULL));
 	calc_fitness();
-	double parent1 = ((double)rand() / (RAND_MAX));
-	double parent2 = ((double)rand() / (RAND_MAX));
-	//for populationsize/2 do this
+	range1 = ((double)rand() / (RAND_MAX));
+	range2 = ((double)rand() / (RAND_MAX));
+	for (i = 0; i < (pop_size/2); i++)
+	{
+		for (k = 1; k < pop_size; k++)
+		{
+			if ( (range1 > normal_fitness_total[k-1]) && (range1 <= normal_fitness_total[k]) )
+			{
+				if (parent_two != k) parent_one = k;
+			}
+			if ( (range2 > normal_fitness_total[k-1]) && (range2 <= normal_fitness_total[k]) )
+			{
+				if (parent_one != k) parent_two = k;
+			}
+			if ( ((parent_one != 0) && (parent_two != 0)) && (parent_one != parent_two) ) break;
+		}
+
+/*---------------------------------- No idea if anything below this line works -----------------------------------*/
+
+		/*cross over calcs */
+		crossover = ((double)rand() / (RAND_MAX));
+		/*If cross_p is greater perform crossover(on a bit flip --> explains why pop/2 iterations... or else just copy them over */
+		if (crossover <= cross_p)
+		{
+			cross_iterations = rand() % gene;
+			for (int j = 0; j < cross_iterations; j++)
+			{
+				offspring[i*2][j] = bit_s[parent_one][j];
+				offspring[(i*2)+1][j] = bit_s[parent_two][j];
+			}
+			for (int n = cross_iterations; n < gene; n++)
+			{
+				offspring[i*2][n] = bit_s[parent_two][n];
+				offspring[(i*2)+1][n] = bit_s[parent_one][n];
+			}
+		}
+		else
+		{
+			for (int j = 0; j < gene; j++)
+			{
+				offspring[i*2][j] = bit_s[parent_one][j];
+				offspring[(i*2)+1][j] = bit_s[parent_two][j];
+			}
+		}
+		
+		/*Mutation calcs*/
+		for (int j = 0; j < gene; j++)
+		{
+			mutation = ((double)rand() / (RAND_MAX)); //first offspring
+			if (mutation <= mutate_prob)
+			{
+				if (offspring[i*2][j] == 1) offspring[i*2][j] = 0;
+				else offspring[i*2][j] = 1;
+			}
+			
+			mutation = ((double)rand() / (RAND_MAX)); //second offspring
+			if (mutation <= mutate_prob)
+			{
+				if (offspring[(i*2)+1][j] == 1) offspring[(i*2)+1][j] = 0;
+				else offspring[(i*2)+1][j] = 1;
+			}
+		}
+	}
+	
+	/*update function*/
+	update(bit_s, offspring);
+	int max_index = most_fit(fitness);
+	cout << "Max index is: " << max_index << endl;
 }
 
 /* For testing purposes only. */
 void GEN::print()
 {
-	calc_fitness();
+	select_parents();
 	cout << "Individual " << setw(17) << "Fitness Value " << setw(20) << right << "Normalized Fitness" << setw(15) << "Running Total" << endl;
 	for (unsigned int i = 0; i < fitness.size(); i++)
 	{
