@@ -4,9 +4,10 @@
 
 CC = g++
 CFLAGS = -g -Wall
+VER = -std=c++11
 TARGET = GenAlgorithm
 all = $(TARGET)
 $(TARGET): $(TARGET).cpp
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp
+	$(CC) $(CFLAGS) $(VER) -o $(TARGET) $(TARGET).cpp
 clean:
 	$(RM) $(TARGET)
