@@ -13,6 +13,8 @@
 #include <algorithm>
 #include <fstream>
 #include <ctime>
+#include <sstream>
+#include <iterator>
 
 using namespace std;
 
@@ -21,7 +23,8 @@ class GEN
 {
 	private:
 		int gene, pop_size, num_gens, runs;
-		double mutate_prob, cross_p, total_fit_count;
+		double mutate_prob, cross_p, total_fit_count, normal_fit_sum;
+		vector<double> avg_fitness;
 		vector <double> fitness;
 		vector<double> total_fitness;
 		vector<double> normal_fitness;
@@ -47,6 +50,11 @@ GEN::GEN(int g, int ps, int ng, double mp, double cp, int ru)
 	mutate_prob = mp;
 	cross_p  = cp;
 	runs = ru;
+	fitness.resize(pop_size);
+	total_fitness.resize(pop_size);
+	normal_fitness.resize(pop_size);
+	normal_fitness_total.resize(pop_size);
+	srand(time(NULL));
 }
 
 vector<vector<int> > GEN::update(vector< vector<int> > source, vector< vector<int> > dest)
@@ -80,6 +88,7 @@ void GEN::init_bitstring()
 {
 	bit_s.resize(pop_size);
 	offspring.resize(pop_size);
+	avg_fitness.resize(num_gens);
 	for (int i = 0; i < pop_size; i++)
 	{
 		bit_s[i].resize(gene);
@@ -94,16 +103,11 @@ void GEN::calc_fitness()
 {
 	unsigned int i, j;
 	int index;
-	int bit_sum = 0;
+	unsigned long bit_sum = 0;
 	double fit_level = 0;
 	total_fit_count = 0;
-	double normal_fit_sum = 0;
+	normal_fit_sum = 0;
 	
-	fitness.resize(pop_size);
-	total_fitness.resize(pop_size);
-	normal_fitness.resize(pop_size);
-	normal_fitness_total.resize(pop_size);
-
 	for (i = 0; i < bit_s.size(); i++)
 	{
 		index = gene - 1;
@@ -114,7 +118,8 @@ void GEN::calc_fitness()
 			index--;
 		}
 		/*Fitness value */
-		fit_level = pow( ( (1.0*bit_sum) / (pow(2,gene)) ), 10 );	
+		fit_level = pow( ( (1.0*bit_sum) / (pow(2,(1.0)*gene)) ), 10 );	
+	//	fit_level = (1.0*bit_sum) / pow(2,gene);
 		fitness[i] = fit_level;
 		/*Total fitness value*/
 	
@@ -133,24 +138,30 @@ void GEN::calc_fitness()
 
 }
 
-/* March 10 update: Everything fixed (had two srand()'s!!!!) and working EXCEPT FOR FITNESS VALS WTF */
+/* March 12 update: Issues might have something to do with crossover and mutation calcs. 
+ * PARENT CALCS NOT ADDING UP ---> same parents for each iteration, use a while loop so a new set is chosen each iteration (i)
+ * this has to do with range as well*/
 void GEN::run()
 {
-	
+	stringstream ss;
 	ofstream os;
-	os.open("GAMaster.csv");
+	os.open("GenAlgMaster.csv"); //change to a file if i want to add anything
 	os << "Name: Samuel Steinberg\n";
 	os << "CS420 Project 4: Genetic Algorithms\n\n";
 	
 	double crossover, mutation, range1, range2;
 	int k, i, cross_iterations, parent_one = 0, parent_two = 0;
-
-	srand(time(NULL));
+	os << "Number of Genes:,," << gene << "\n";
+	os << "Population Size:,," << pop_size << "\n";
+	os << "Number of Generations:,," << num_gens << "\n";
+	os << "Mutation Probability:,," << mutate_prob << "\n";
+	os << "Crossover Probability:,," << cross_p << "\n";
+	os << "Number of Runs:,," << runs << "\n\n";
 	for (int r = 0; r < runs; r++) 
 	{
 		os << "Run " << (r+1) << "\n";
 		init_bitstring();
-		os << "Generation,Average Fitness, Best Fit, Corret Bits\n";
+		os << "Generation,Average Fitness,Best Fit,Correct Bits,Best String\n";
 		for (int gener = 0; gener < num_gens; gener++)
 		{
 			calc_fitness();
@@ -159,6 +170,7 @@ void GEN::run()
 			range2 = ((double)rand() / (RAND_MAX));
 			for (i = 0; i < (pop_size/2); i++)
 			{
+				parent_one = 0; parent_two = 0;
 				for (k = 1; k < pop_size; k++)
 				{
 					if ( (range1 > normal_fitness_total[k-1]) && (range1 <= normal_fitness_total[k]) )
@@ -171,7 +183,7 @@ void GEN::run()
 					}
 					if ( ((parent_one != 0) && (parent_two != 0)) && (parent_one != parent_two) ) break;
 				}
-
+				cout << "iter: " << i << "P1: " << parent_one << " P2: " << parent_two << endl;
 				/*cross over calcs */
 				crossover = ((double)rand() / (RAND_MAX));
 				/*If cross_p is greater perform crossover(on a bit flip --> explains why pop/2 iterations... or else just copy them over */
@@ -223,18 +235,20 @@ void GEN::run()
 	
 			int bit_count = 0;
 			auto ind_string = bit_s.at(max_index);
-
+		
 			for (unsigned int j = 0; j < ind_string.size(); j++) //not sure if they meant this by correct bits...check this
 			{
 				if (ind_string[j] == 1) bit_count++;
 			}
-	
-			auto avg_fitness = total_fit_count / fitness.size(); //for each gen make array/vector of these
-	
-			os <<  gener << "," << avg_fitness << "," <<  fitness[max_index] << "," << bit_count << "\n";
+			
+		//	auto avg_fitness = total_fit_count / (1.0*pop_size); //for each gen make array/vector of these
+			avg_fitness[gener] = total_fit_count / (1.0*pop_size);
+			copy(ind_string.begin(), ind_string.end(), ostream_iterator<int>(ss,""));
+			string best = ss.str();
+			os  <<  gener << "," << avg_fitness[gener] << "," <<  fitness[max_index] << "," << bit_count << "," << "'" + best << "\n";
+			ss.str("");			
 		}//gener
-	} //runs
-	
+	} //runs	
 	os.close();
 }
 
