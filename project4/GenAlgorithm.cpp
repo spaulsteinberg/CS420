@@ -119,14 +119,13 @@ void GEN::calc_fitness()
 		}
 		/*Fitness value */
 		fit_level = pow( ( (1.0*bit_sum) / (pow(2,(1.0)*gene)) ), 10 );	
-	//	fit_level = (1.0*bit_sum) / pow(2,gene);
 		fitness[i] = fit_level;
+		
 		/*Total fitness value*/
 	
 		total_fit_count += fitness[i];
 		total_fitness[i] = total_fit_count;
 	
-		
 	}
 	/*Normalized fitness and its running total */
 	for (int k = 0; k < pop_size; k++)
@@ -145,10 +144,10 @@ void GEN::run()
 {
 	stringstream ss;
 	ofstream os;
-	os.open("GenAlgMaster.csv"); //change to a file if i want to add anything
+	os.open("Test.csv", ios::app); //change to a file if i want to add anything
+	if (os.fail()) cerr << "Error opening file..." << endl;
 	os << "Name: Samuel Steinberg\n";
 	os << "CS420 Project 4: Genetic Algorithms\n\n";
-	
 	double crossover, mutation, range1, range2;
 	int k, i, cross_iterations, parent_one = 0, parent_two = 0;
 	os << "Number of Genes:,," << gene << "\n";
@@ -166,10 +165,12 @@ void GEN::run()
 		{
 			calc_fitness();
 		
-			range1 = ((double)rand() / (RAND_MAX));
-			range2 = ((double)rand() / (RAND_MAX));
+			//range1 = ((double)rand() / (RAND_MAX));
+			//range2 = ((double)rand() / (RAND_MAX));
 			for (i = 0; i < (pop_size/2); i++)
 			{
+			range1 = ((double)rand() / (RAND_MAX));
+			range2 = ((double)rand() / (RAND_MAX));
 				parent_one = 0; parent_two = 0;
 				for (k = 1; k < pop_size; k++)
 				{
