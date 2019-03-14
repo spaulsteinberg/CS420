@@ -15,6 +15,7 @@
 #include <ctime>
 #include <sstream>
 #include <iterator>
+#include <ostream>
 
 using namespace std;
 
@@ -142,14 +143,21 @@ void GEN::calc_fitness()
  * this has to do with range as well*/
 void GEN::run()
 {
-	stringstream ss;
-	ofstream os;
-	os.open("Test.csv", ios::app); //change to a file if i want to add anything
-	if (os.fail()) cerr << "Error opening file..." << endl;
-	os << "Name: Samuel Steinberg\n";
-	os << "CS420 Project 4: Genetic Algorithms\n\n";
 	double crossover, mutation, range1, range2;
 	int k, i, cross_iterations, parent_one = 0, parent_two = 0;
+	
+	stringstream ss;
+	ofstream os;
+	
+	os.open("GenAlgMaster.csv", ios::app); //change to a file if i want to add anything
+	if (os.fail()) cerr << "Error opening file..." << endl;
+	if (os.tellp() == 0)
+	{
+		os << "Name: Samuel Steinberg\n";
+		os << "CS420 Project 4: Genetic Algorithms\n";
+		os << "Experiments are conducted with the parameters listed above the runs\n\n";
+	}
+	else os << "\n\n";
 	os << "Number of Genes:,," << gene << "\n";
 	os << "Population Size:,," << pop_size << "\n";
 	os << "Number of Generations:,," << num_gens << "\n";
@@ -165,13 +173,12 @@ void GEN::run()
 		{
 			calc_fitness();
 		
-			//range1 = ((double)rand() / (RAND_MAX));
-			//range2 = ((double)rand() / (RAND_MAX));
 			for (i = 0; i < (pop_size/2); i++)
 			{
-			range1 = ((double)rand() / (RAND_MAX));
-			range2 = ((double)rand() / (RAND_MAX));
+				range1 = ((double)rand() / (RAND_MAX));
+				range2 = ((double)rand() / (RAND_MAX));
 				parent_one = 0; parent_two = 0;
+				
 				for (k = 1; k < pop_size; k++)
 				{
 					if ( (range1 > normal_fitness_total[k-1]) && (range1 <= normal_fitness_total[k]) )
@@ -184,7 +191,6 @@ void GEN::run()
 					}
 					if ( ((parent_one != 0) && (parent_two != 0)) && (parent_one != parent_two) ) break;
 				}
-				cout << "iter: " << i << "P1: " << parent_one << " P2: " << parent_two << endl;
 				/*cross over calcs */
 				crossover = ((double)rand() / (RAND_MAX));
 				/*If cross_p is greater perform crossover(on a bit flip --> explains why pop/2 iterations... or else just copy them over */
@@ -242,7 +248,6 @@ void GEN::run()
 				if (ind_string[j] == 1) bit_count++;
 			}
 			
-		//	auto avg_fitness = total_fit_count / (1.0*pop_size); //for each gen make array/vector of these
 			avg_fitness[gener] = total_fit_count / (1.0*pop_size);
 			copy(ind_string.begin(), ind_string.end(), ostream_iterator<int>(ss,""));
 			string best = ss.str();
@@ -257,12 +262,14 @@ void GEN::run()
 void GEN::show()
 {
 	run();
+	/*
 	cout << "Individual " << setw(17) << "Fitness Value " << setw(20) << right << "Normalized Fitness" << setw(15) << "Running Total" << endl;
 	for (unsigned int i = 0; i < fitness.size(); i++)
 	{
 		cout << setw(5) << i << setw(20)<<right<<fixed<< fitness[i] << setw(20) << normal_fitness[i] << setw(15) << right << normal_fitness_total[i] << endl; 
 	}
 	cout << endl;
+	*/
 }
 
 int main(int argc, char *argv[])

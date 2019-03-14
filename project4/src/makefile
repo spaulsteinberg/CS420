@@ -4,7 +4,7 @@
 
 CC = g++
 CFLAGS = -g -Wall
-VER = -std=c++11
+VER = -std=c++0x
 TARGET = GenAlgorithm
 all = $(TARGET)
 $(TARGET): $(TARGET).cpp
