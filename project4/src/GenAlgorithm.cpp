@@ -20,11 +20,11 @@
 using namespace std;
 
 /*GEN class contains data needed by algorithms --> constructor takes the gene length, population size, number of generations,
-  probability of mutation, crossover probability, and the number of runs for each sim */
+  probability of mutation, crossover probability, the number of runs for each sim, and an simulation ID */
 class GEN
 {
 	private:
-		int gene, pop_size, num_gens, runs;
+		int gene, pop_size, num_gens, runs, sim_id;
 		double mutate_prob, cross_p, total_fit_count, normal_fit_sum;
 		vector<double> avg_fitness;
 		vector <double> fitness;
@@ -39,13 +39,13 @@ class GEN
 		vector<vector<int> > update(vector< vector<int> >, vector<vector<int> >);
 		int most_fit(vector<double>);
 	public:
-		GEN(int, int, int, double, double, int);
+		GEN(int, int, int, double, double, int, int);
 		void show();
 
 };
 
 /* In addition to the program args, the constructor also resizes necessary vectors and initializes the random number generator */
-GEN::GEN(int g, int ps, int ng, double mp, double cp, int ru)
+GEN::GEN(int g, int ps, int ng, double mp, double cp, int ru, int si)
 {
 	gene = g;
 	pop_size = ps;
@@ -53,6 +53,7 @@ GEN::GEN(int g, int ps, int ng, double mp, double cp, int ru)
 	mutate_prob = mp;
 	cross_p  = cp;
 	runs = ru;
+	sim_id = si;
 	fitness.resize(pop_size);
 	total_fitness.resize(pop_size);
 	normal_fitness.resize(pop_size);
@@ -151,7 +152,11 @@ void GEN::run()
 	stringstream ss;
 	ofstream os;
 	/*Open file, give error is a failure, if the file is empty write the header...if not just print some new lines between sims */
-	os.open("GenAlgMaster.csv", ios::app);
+	string filename = "GenMaster" + to_string(sim_id) + ".csv";
+	/* --------------- Add desired file name below ----------------- */
+	os.open(filename, ios::app);
+	/* ------------------------------------------------------------- */
+
 	if (os.fail()) cerr << "Error opening file..." << endl;
 	if (os.tellp() == 0)
 	{
@@ -277,14 +282,15 @@ void GEN::show()
 
 int main(int argc, char *argv[])
 {
-	if (argc != 7) fprintf(stderr, "Wrong arguments: L | N | G | Pm | Pc | R"); 
+	if (argc != 8) fprintf(stderr, "Wrong arguments: L | N | G | Pm | Pc | R | ID"); 
 	int genes = atoi(argv[1]);
 	int pop_size = atoi(argv[2]);
 	int num_gens = atoi(argv[3]);
 	double mutation_prob = atof(argv[4]);
 	double cross_prob = atof(argv[5]);
 	int runs = atoi(argv[6]);
-	GEN g(genes, pop_size, num_gens, mutation_prob, cross_prob, runs);
+	int sim_ = atoi(argv[7]);
+	GEN g(genes, pop_size, num_gens, mutation_prob, cross_prob, runs, sim_);
 	g.show();
 	
 	return 0;
