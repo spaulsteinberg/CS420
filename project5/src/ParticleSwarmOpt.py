@@ -29,8 +29,8 @@ class Swarm:
         # ----- Get random positioning ----- #
 
         for i in range(self.num_particles):
-            x_pos = random.randint(-50, 50)
-            y_pos = random.randint(-50, 50)
+            x_pos = round(random.uniform(-50, 50), 2)
+            y_pos = round(random.uniform(-50, 50), 2)
             self.x_coords.append(x_pos)
             self.y_coords.append(y_pos)
             self.position.append((x_pos, y_pos))
@@ -44,7 +44,7 @@ class Swarm:
         self.personal_best_num = [-100000 for i in range(num_particles)]
         for i in range(num_particles):
             self.p_best(i, self.position[i])
-            #print(self.personal_best, " ", self.personal_best_num[i])
+            #print(self.personal_best[i], " ", self.personal_best_num[i])
 
         # ----- Global Best Initialization to best particle ----- #
 
@@ -71,17 +71,55 @@ class Swarm:
         Q = 100 * (1 - (pdist / mdist))
         if (Q > self.personal_best_num[i]):
             self.personal_best_num[i] = Q
-            self.personal_best = j
+            self.personal_best[i] = j
 
-    #def run(self):
-        #err_t = 0
-        #num_iter = 0
-        #while err_t < self.error_threshold and num_iter < 15000:
-            #num_iter += 1
-            #for i in range(self.num_particles):
+    def x_diff(self, i, j):
+        dif = abs(i[0] - j[0])
+        return dif
 
+    def y_diff(self, i, j):
+        dif = abs(i[1] - j[1])
+        return dif
 
+    def update_position(self, pos, x_velo, y_velo):
+       x = int(pos[0])
+       y = int(pos[1])
+       x = x + x_velo
+       y = y + y_velo
+       pos = (x, y)
+       return pos
 
+    def run(self):
+        x_err = 0
+        y_err = 0
+        num_iter = 0
+        while (x_err < self.error_threshold or y_err < self.error_threshold) and num_iter < 15000:
+            num_iter += 1
+            for i in range(self.num_particles):
+                r_1 = random.uniform(0.0, 1.0)
+                r_2 = random.uniform(0.0, 1.0)
+                self.x_velo[i] = self.inertia * self.x_velo[i] + self.cognition * r_1 * \
+                                 self.x_diff(self.personal_best[i], self.position[i]) + self.social * r_2 * self.x_diff(self.global_best, self.position[i])
+                self.y_velo[i] = self.inertia * self.y_velo[i] + self.cognition * r_1 * \
+                                 self.y_diff(self.personal_best[i], self.position[i]) + self.social * r_2 * self.y_diff(self.global_best, self.position[i])
+                if (math.pow(self.x_velo[i], 2) + math.pow(self.y_velo[i], 2)) > math.pow(self.max_velo, 2):
+                    self.x_velo[i] = (self.max_velo / math.sqrt(math.pow(self.x_velo[i], 2) + math.pow(self.y_velo[i], 2))) * \
+                                     self.x_velo[i]
+                    self.y_velo[i] = (self.max_velo / math.sqrt(math.pow(self.x_velo[i], 2) + math.pow(self.y_velo[i], 2))) * \
+                                     self.y_velo[i]
+                self.position[i] = self.update_position(self.position[i], self.x_velo[i], self.y_velo[i])
+                self.p_best(i, self.position[i])
+                self.g_best(self.position[i])
+                x_err = 0
+                y_err = 0
+                for k in range(self.num_particles):
+                    x_err += math.pow(self.position[k][0] - self.global_best[0], 2)
+                    y_err += math.pow(self.position[k][1] - self.global_best[1], 2)
+            x_err = math.sqrt((1/(2*self.num_particles)) *x_err)
+            y_err = math.sqrt((1 / (2 * self.num_particles)) * y_err)
+            print(x_err)
+            print(y_err)
+                #print(self.personal_best[i], " ", self.global_best)
 
 def main():
     num_particles = int(sys.argv[1])
@@ -93,6 +131,6 @@ def main():
     max_velo = int(sys.argv[7])
     error_threshold = float(sys.argv[8])
     swarm = Swarm(num_particles, inertia, cognition, social, w_width, w_height, max_velo, error_threshold)
-
+    swarm.run()
 if __name__ == '__main__':
     main()
